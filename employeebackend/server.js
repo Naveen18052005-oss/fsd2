@@ -36,7 +36,7 @@ db.connect((err) => {
     }
 });
 
-app.post("https://fsd2.onrender.com/api/employees", (req, res) => {
+app.post("/api/employees", (req, res) => {
     const {
         name,
         employeeId,
