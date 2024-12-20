@@ -7,7 +7,16 @@ const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
-app.use(cors());
+const cors = require("cors");
+
+app.use(
+    cors({
+        origin: "https://fsd2-wheat.vercel.app", // Your frontend URL
+        methods: "GET,POST,PUT,DELETE",         // Allowed HTTP methods
+        allowedHeaders: "Content-Type",         // Allowed headers
+    })
+);
+
 
 
 const db = mysql.createConnection({
