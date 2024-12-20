@@ -46,7 +46,7 @@ function AddEmployee() {
       setSuccessMessage("");
     } else {
       setErrors({});
-      const res = await fetch("https://fsd2.onrender.com/", {
+      const res = await fetch("https://fsd2.onrender.com/api/employees", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
